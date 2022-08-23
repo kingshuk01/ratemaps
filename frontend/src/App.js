@@ -7,6 +7,7 @@ import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
+
 function App() {
   const myStorage = window.localStorage;
   const [currentUsername, setCurrentUsername] = useState(myStorage.getItem("user"));
@@ -78,7 +79,7 @@ function App() {
     <div style={{ height: "100vh", width: "100%" }}>
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken="pk.eyJ1Ijoia2luZ3NodWswMSIsImEiOiJjbDc2bHhodDAwM3IxNDJtemw2dWZtNzA5In0.3SLu50YW34scsx3F49bPnQ"
+        mapboxApiAccessToken= {process.env.REACT_APP_MAPBOX}
         width="100%"
         height="100%"
         transitionDuration="200"
